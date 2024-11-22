@@ -4,6 +4,10 @@ require_once __DIR__ . "/../controllers/ControlConexionPdo.php";
 require_once __DIR__ . "/../controllers/ControlEntidad.php";
 require_once __DIR__ . "/../models/EntityModel.php";
 
+session_start();
+$rol = $_SESSION['rol'];
+
+
 $objControlProyecto = new ControlEntidad('proyecto');
 $arregloListar = $objControlProyecto->listar();
 
@@ -84,12 +88,7 @@ switch ($boton) {
 <body>
     <h1><ins>Gestión de Productos</ins></h1>
 
-    <div class="view-buttons">
-        <a href="./viewProyecto.php">Proyectos</a>
-        <a href="./viewTipoProducto.php">Tipo Producto</a>
-        <a href="./viewTerminoClave.php">Términos Clave</a>
-    </div>
-
+    
     <div class="users-form">
         <form method="POST" action="#">
             <h2><?php echo isset($datos_producto['id']) ? 'Actualizar Producto' : 'Crear Producto'; ?></h2>
@@ -132,7 +131,9 @@ switch ($boton) {
                     <th>Fecha Entrega</th>
                     <th>Proyecto</th>
                     <th>Tipo Producto</th>
+                    <?php if ($rol == 'Administrador'): ?> <!-- Solo muestra la columna "Acciones" si el rol no es estudiante -->
                     <th>Acciones</th>
+                <?php endif; ?>
                 </tr>
             </thead>
 
@@ -145,6 +146,7 @@ switch ($boton) {
                         <td><?= $producto->__get('proyecto') ?></td>
                         <td><?= $producto->__get('tipo_producto') ?></td>
                         <td>
+                        <?php if ($rol == 'Administrador'): ?>
                             <form method="POST" action="viewProducto.php" style="display:inline;">
                                 <input type="hidden" name="id" value="<?= $producto->__get('id') ?>">
                                 <input type="submit" name="bt" value="Editar">
@@ -153,6 +155,7 @@ switch ($boton) {
                                 <input type="hidden" name="id" value="<?= $producto->__get('id') ?>">
                                 <input type="submit" name="bt" value="Borrar" class="users-table--delete" onclick="return confirm('¿Está seguro de que desea borrar este producto?');">
                             </form>
+                            <?php endif; ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

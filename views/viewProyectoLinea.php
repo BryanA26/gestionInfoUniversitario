@@ -92,15 +92,7 @@ switch ($boton) {
 <body>
     <h1><ins>Proyecto de Aula</ins></h1>
 
-    <div class="view-buttons">
-        <a href="./viewProyecto.php">Proyectos</a>
-        <a href="./viewTipoProducto.php">Tipo Producto</a>
-        <a href="./viewProducto.php">Productos</a>
-        <a href="./viewProyectoLinea.php">Linea de Proyecto</a>
-        <a href="./viewTerminoClave.php">Términos Clave</a>
-        <a href="./viewPalabrasClave.php">Palabras Clave</a>
-
-    </div>
+    
 
     <div class="users-form">
         <form method="POST" action="#">

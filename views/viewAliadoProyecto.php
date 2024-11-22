@@ -91,12 +91,7 @@ switch ($boton) {
 <body>
     <h1><ins>Aliado - Proyecto</ins></h1>
 
-    <div class="view-buttons">
-        <a href="./viewProyecto.php">Proyectos</a>
-        <a href="./viewTipoProducto.php">Tipo Producto</a>
-        <a href="./viewTerminoClave.php">Términos Clave</a>
-    </div>
-
+   
     <div class="users-form">
         <form method="POST" action="viewAliadoProyecto.php">
             <h2><?php echo isset($datos_doc_prod['aliado']) ? 'Actualizar ' : 'Crear '; ?></h2>

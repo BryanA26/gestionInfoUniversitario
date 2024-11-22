@@ -91,11 +91,7 @@ switch ($boton) {
 <body>
     <h1><ins>Docente - Producto</ins></h1>
 
-    <div class="view-buttons">
-        <a href="./viewProyecto.php">Proyectos</a>
-        <a href="./viewTipoProducto.php">Tipo Producto</a>
-        <a href="./viewTerminoClave.php">Términos Clave</a>
-    </div>
+    
 
     <div class="users-form">
         <form method="POST" action="viewDocenteProd.php">

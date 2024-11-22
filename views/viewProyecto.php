@@ -1,4 +1,7 @@
 <?php
+session_start();
+$rol = $_SESSION['rol'];
+
 require_once __DIR__ . "/../connection/configBd.php";
 require_once __DIR__ . "/../controllers/ControlConexionPdo.php";
 require_once __DIR__ . "/../controllers/ControlEntidad.php";
@@ -120,8 +123,9 @@ switch ($boton) {
                     <th>Tipo de fondos</th>
                     <th>Fecha inicio del proyecto</th>
                     <th>Fecha finalización del proyecto</th>
-                    <th></th>
-                    <th></th>
+                    <th>Acciones</th>
+
+                    
                 </tr>
             </thead>
 

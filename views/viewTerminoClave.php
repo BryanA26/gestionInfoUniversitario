@@ -11,11 +11,7 @@
 <body>
     <h1><ins>Proyecto de Aula</ins></h1>
 
-    <div class="view-buttons">
-        <a href="./viewProyecto.php">Proyectos</a>
-        <a href="./viewTipoProducto.php">Tipo Producto</a>
-        <a href="./viewTerminoClave.php">Términos Clave</a>
-    </div>
+    
 
     <div class="users-form">
         <form action="insert.php" method="POST">

@@ -1,0 +1,123 @@
+.header_cttos>div>h1 {
+    padding: 0;
+    margin: 4px;
+    font-size: 15px;
+    font-weight: 100;
+    color: black;
+}
+
+:root {
+    --primary: #157dcf;
+    --greyLight: #23adad e1;
+    --greyLight-2: #cbe0dd;
+    --greyDark: #2d4848;
+}
+
+.pagination-container a {
+    color: var(--greyDark);
+}
+
+.pagination-container {
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.6px;
+    line-height: 1.4;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: var(--greyDark);
+    font-weight: 400;
+    user-select: none;
+}
+
+.pagination-container ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6rem;
+    background: var(--greyLight-2);
+    box-shadow: 0 0.8rem 2rem rgb(90 97 129 / 5%);
+    height: fit-content;
+    margin: 15px 5px;
+    padding: 0;
+}
+
+.pagination-container li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 0.4rem;
+}
+
+.pagination-container li a {
+    width: 2.6rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-container li a:hover {
+    color: var(--primary);
+}
+
+
+.pagination-container .active {
+    color: #fff;
+    background: var(--primary);
+    font-weight: 600;
+    border: 1px solid var(--primary);
+}
+
+.pagination-container .active a {
+    color: #fff !important;
+}
+
+.pagination-container .active:hover {
+    background-color: var(--greyDark);
+}
+
+
+.pagination-container li.disabled {
+    cursor: not-allowed;
+}
+
+.pagination-container .disabled a {
+    pointer-events: none;
+    cursor: default;
+    color: gray;
+}
+
+.pagination-container ul>li:nth-child(1) a,
+.pagination-container>ul li:last-child a {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    width: fit-content;
+    color: var(--greyLight);
+}
+
+.pagination-container ul>li:nth-child(1) .active,
+.pagination-container>ul li:last-child {
+    color: var(--greyDark);
+    pointer-events: initial;
+}
+
+.pagination-container ul>li:nth-child(1) .active:hover,
+.pagination-container>ul li:last-child {
+    color: var(--primary);
+}
+
+.material-icons {
+    background: whitesmoke;
+    border-radius: 25px;
+}
+
+section {
+    align-items: center !important;
+}

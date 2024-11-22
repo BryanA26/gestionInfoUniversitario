@@ -93,12 +93,7 @@ switch ($boton) {
 <body>
     <h1><ins>Desarrolla</ins></h1>
 
-    <div class="view-buttons">
-        <a href="./viewProyecto.php">Proyectos</a>
-        <a href="./viewTipoProducto.php">Tipo Producto</a>
-        <a href="./viewTerminoClave.php">Términos Clave</a>
-    </div>
-
+    
     <div class="users-form">
         <form method="POST" action="viewDesarrolla.php">
             <h2><?php echo isset($datos_desarrolla['docente']) ? 'Actualizar ' : 'Crear '; ?></h2>

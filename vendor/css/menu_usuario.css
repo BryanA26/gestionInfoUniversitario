@@ -1,0 +1,220 @@
+:root {
+
+    --blue-gradient: rgba(78, 108, 239, 1);
+    --blue-gradientv2: rgba(2, 136, 209, 1);
+}
+
+.btn-confirm{
+    margin: 0px 5px;
+}
+
+.btn-cancel{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+nav {
+    display: flex;
+    position: fixed;
+    right: 0;
+    width: fit-content;
+    background-image: radial-gradient(circle 358px at -2% 48.6%, rgba(78, 108, 239, 1) 0%, rgba(2, 136, 209, 1) 90%);
+    height: 65px;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    z-index: 99;
+}
+
+.nav-box {
+    background: whitesmoke;
+    height: fit-content;
+    width: fit-content;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin: 5px;
+    color: black;
+    font-weight: 600;
+    user-select: none;
+}
+
+nav i {
+    color: #006DF1;
+    padding: 5px;
+    font-size: 18px;
+}
+
+nav .nav-dropdown {
+    display: none;
+    margin: 0;
+    margin-top: 15px;
+}
+
+nav #nav-options {
+    cursor: pointer;
+}
+
+.nav-box-icon{ 
+    display: flex;
+    justify-content: space-evenly;
+    user-select: none;
+    pointer-events: none;
+    align-items: center;
+}
+
+.nav-box-icon span {
+    margin-left: 5px;
+}
+
+nav ul {
+    padding: 0;
+    text-align: center;
+    list-style: none;
+}
+
+svg {
+    user-select: none;
+    pointer-events: none;
+}
+
+nav ul li {
+    display: flex;
+    margin-bottom: 5px;
+    border: 1px solid var(--blue-gradient);
+}
+
+#nav-crinmo * a {
+    color: rgb(0 0 0);
+    text-decoration: none;
+    width: 8em;
+    padding: 0.5em 0;
+}
+
+#nav-crinmo > div:nth-child(3){
+    padding: 0;
+}
+
+#nav-crinmo > div:nth-child(3) a {
+    display: flex;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav ul li:hover {
+
+    border-color: var(--blue-gradientv2);
+    background-color: var(--blue-gradient);
+    color: whitesmoke;
+}
+
+nav ul li:hover a {
+    color: whitesmoke !important;
+}
+
+#nav-reponsive {
+    display: none;
+}
+
+
+nav #nav-options * a:hover{
+    color: whitesmoke;
+    border-color: var(--blue-gradientv2);
+    background-color: var(--blue-gradient);
+    text-decoration:  none;
+}
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 860px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 5%;
+        width: fit-content;
+        height: fit-content;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        animation: fadeIn .3s ease-in both;
+    }
+
+    nav #nav-options * a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    
+    }
+
+    .nav-on {
+        display: flex;
+    }
+
+    .nav-box {
+        width: 100%;
+    }
+
+    nav ul li {
+        border-radius: 1em;
+        color: whitesmoke;
+        border: none;
+        background-color: var(--blue-gradient);
+    }
+
+    nav ul li:hover {
+        color: whitesmoke;
+        border: 1px solid rgb(0, 0, 0);
+        background-color: none;
+        font-size: large;
+        text-shadow: black 1px 1px;
+    }
+
+    nav .nav-dropdown {
+        display: block;
+    }
+
+    #nav-reponsive {
+        position: absolute;
+        right: 5px;
+        top: 6px;
+        color: white;
+        background: var(--blue-gradient);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 35px;
+        text-shadow: black 1px 1px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        cursor: pointer;
+    }
+
+    .nav-box-icon{ 
+        justify-content: flex-start;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translate3d(0, -20%, 0);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+    /* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {}
